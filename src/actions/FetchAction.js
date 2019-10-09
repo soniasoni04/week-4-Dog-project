@@ -7,6 +7,13 @@ export const SetBreedList =(breeds) => {
     }
 }
 
+export const SetBreedImages =(breedImages) =>{
+    return {
+        type : 'SET_BREED_IMAGES',
+        payload : breedImages
+    }
+}
+
 
 
 
