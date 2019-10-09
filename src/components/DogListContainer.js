@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import request from 'superagent'
+import DogsList from './DogList'
 
-export default class DogsList extends Component {
+export default class DogsListContainer extends Component {
   state = { dogBreeds: null }
 
   componentDidMount() {
