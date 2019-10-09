@@ -7,8 +7,8 @@ class DogBreed extends React.Component{
        return(
             <div>
                 <ol>
-                {this.props.breeds.map(breed => (
-                    <li key={breed}>
+                {this.props.breeds.map((breed,index) => (
+                    <li key={index}>
                         <Link to={ `/dog-breeds/${breed}` }>{breed}</Link>
                     </li>)
                 )}  
