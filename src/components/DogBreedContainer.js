@@ -1,34 +1,26 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import DogBreed from './DogBreed'
-import DogBreedImages from './DogBreedImages'
-import { request } from 'http'
+import request from 'superagent'
+import {SetBreedList} from '../actions/FetchBreedList'
 
 class DogBreedContainer extends React.Component {
    componentDidMount() {
-       fetch('https://dog.ceo/api/breeds/list/all')
-           .then(response => response.json())
-           .then(data => {
-               const action = {
-                   type: 'SET_BREED',
-                   payload: Object.keys(data.message)
-               }
-               this.props.dispatch(action)
-           })
-
-
-           
-
-
-
-
+       request
+       .get('https://dog.ceo/api/breeds/list/all')
+        .then(response => {
+            const breeds = Object.keys(response.body.message)
+            this.props.dispatch(SetBreedList(breeds))
         }
+            
+            )
+        .catch(console.error)
+ }
    render() {
        return(
        <div>
            <h1>Hello Dog Lovers...</h1>
            <DogBreed breeds={this.props.breeds}/>
-           
        </div>)
    }
 }
