@@ -14,6 +14,13 @@ export const SetBreedImages =(breedImages) =>{
     }
 }
 
+export const SetRandomBreed =(randomImageURL,breed ) =>{
+    return {
+        type : 'SET_RANDOM_IMAGES',
+        payload : { randomImageURL : randomImageURL, breed : breed}
+    }
+}
+
 
 
 

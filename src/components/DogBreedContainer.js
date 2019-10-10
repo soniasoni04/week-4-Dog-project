@@ -1,22 +1,25 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import DogBreed from './DogBreed'
-import request from 'superagent'
-import {SetBreedList} from '../actions/FetchAction'
+
+
 
 class DogBreedContainer extends React.Component {
-   componentDidMount() {
-       request
-       .get('https://dog.ceo/api/breeds/list/all')
-        .then(response => {
-            const breeds = Object.keys(response.body.message)
-            this.props.dispatch(SetBreedList(breeds))
-        }
+//    componentDidMount() {
+//        request
+//        .get('https://dog.ceo/api/breeds/list/all')
+//         .then(response => {
+//             const breeds = Object.keys(response.body.message)
+//             this.props.dispatch(SetBreedList(breeds))
+//         }
             
-            )
-        .catch(console.error)
- }
-   render() {
+//             )
+//         .catch(console.error)
+//  }
+   
+
+
+render() {
 
        return(
        <div>
@@ -25,6 +28,8 @@ class DogBreedContainer extends React.Component {
        </div>)
    }
 }
+
+
 
 
 const mapStateToProps = (state) => {
