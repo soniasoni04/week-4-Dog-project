@@ -10,7 +10,6 @@ import game1 from './game1';
 import game2 from './game2';
 import game3 from './game3';
 import {connect} from 'react-redux'
-import RandomQues from './RandomQues';
 
 class App extends React.Component {
   componentDidMount(){
