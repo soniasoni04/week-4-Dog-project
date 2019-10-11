@@ -5,18 +5,6 @@ import DogBreed from './DogBreed'
 
 
 class DogBreedContainer extends React.Component {
-//    componentDidMount() {
-//        request
-//        .get('https://dog.ceo/api/breeds/list/all')
-//         .then(response => {
-//             const breeds = Object.keys(response.body.message)
-//             this.props.dispatch(SetBreedList(breeds))
-//         }
-            
-//             )
-//         .catch(console.error)
-//  }
-   
 
 
 render() {

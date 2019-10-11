@@ -21,6 +21,11 @@ export const SetRandomBreed =(randomImageURL,breed ) =>{
     }
 }
 
-
+export const SetScore =(score) =>{
+    return {
+        type : 'SET_SCORE',
+        payload : score
+    }
+}
 
 
