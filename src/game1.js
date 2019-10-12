@@ -9,7 +9,7 @@ export default class game1 extends Component{
         return ( 
          <div>
                <h2> GAME # 01 </h2>
-               <RandomQues />   
+               <RandomQues /><br></br>
                <Link to='/'>Go back</Link>
          </div>
          ) 

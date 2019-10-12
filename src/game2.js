@@ -3,6 +3,7 @@ import './App.css';
 import {connect} from 'react-redux'
 import { Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import RandomImages from './RandomImages'
 
 
 class game2 extends Component{
@@ -10,15 +11,11 @@ class game2 extends Component{
     render(){
         return(
         
-            <div>
-           <h1>Hello Dog Lovers...</h1><br></br>
-           
+        <div>
             <h2> GAME # 02</h2>
+            <RandomImages /><br></br>
             <Link to='/'>Go back</Link>
-            
-           
-           
-       </div>)
+        </div>)
 
     }
 
