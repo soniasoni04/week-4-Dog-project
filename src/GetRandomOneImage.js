@@ -1,13 +1,11 @@
-
 import request from 'superagent'
 
-export default function getRandomImage(){
+export default function GetRandomOneImage(){
     return function(dispatch){
         request('https://dog.ceo/api/breeds/image/random')
         .then(response => {
-            // console.log(response.body.message)
             dispatch({
-                type: 'GET_RANDON_IMAGE',
+                type: 'GET_RANDON_ONE_IMAGE',
                 payload: response.body.message
             })
         })
